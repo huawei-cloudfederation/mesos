@@ -259,7 +259,11 @@ void HierarchicalAllocatorProcess::addFramework(
     }
   }
 
-  frameworks[frameworkId].suppressed = false;
+
+  // FEDERATION_BEGIN
+  // frameworks[frameworkId].suppressed = false;
+  frameworks[frameworkId].suppressed = true;
+  // FEDERATION_END
 
   LOG(INFO) << "Added framework " << frameworkId;
 
